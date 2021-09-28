@@ -70,7 +70,7 @@ for more; visite [website](https://pub.dev/packages/get)
 
 ## Lets Flutter the Get
 
-### why GetX is the best in my opinion
+### Why GetX Is The Best State Management For Flutter App
 
 - Update only the required widgets.
 - Does not use changeNotifier, it is the state manager that uses less memory (close to 0mb).
@@ -79,3 +79,4 @@ for more; visite [website](https://pub.dev/packages/get)
 - Do you need to trigger an event to update a widget as soon as it is rendered? GetBuilder has the property “initState”, just like StatefulWidget, and you can call events from your controller, directly from it, no more events being placed in your initState.
 - Do you need to trigger an action like closing streams, timers and etc? GetBuilder also has the dispose property, where you can call events as soon as that widget is destroyed.
 - Use streams only if necessary. You can use your StreamControllers inside your controller normally, and use StreamBuilder also normally, but remember, a stream reasonably consumes memory, reactive programming is beautiful, but you shouldn’t abuse it. 30 streams open simultaneously can be worse than changeNotifier (and changeNotifier is very bad).
+- Get is omniscient and in most cases it knows exactly the time to take a controller out of memory. You should not worry about when to dispose of a controller, Get knows the best time to do this.
