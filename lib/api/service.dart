@@ -6,7 +6,7 @@ import 'package:flutter_news_app/model/news.dart';
 class Service {
   static var client = http.Client();
 
-  static final String newsUrl = 'https://newsapi.org/v2/everything?domains=wsj.com&apiKey=5c66f9ee9171404f9adb600b107c71e0';
+  static final String newsUrl = 'https://newsapi.org/v2/everything?domains=wsj.com&apiKey=your_own_api_key';
 
   static Future<News?> fetchNews() async {
     var response = await client.get(newsUrl);
